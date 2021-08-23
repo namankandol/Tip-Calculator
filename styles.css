@@ -1,0 +1,270 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+}
+
+.green-text{
+  color: hsl(186, 14%, 43%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.3rem;
+}
+
+.white-text{
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.sub-text{
+  color: hsl(184, 14%, 56%);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 100px;
+  height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.mainbody{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  height: 28rem;
+  width: 55rem;
+  border-radius: 20px;
+  margin-top: 55px;
+  padding: 0 0.4rem 0 0;
+  box-shadow: 0 0 0 30px -10px;
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+/* RIGHT SIDE DESIGN  */
+
+/*//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+
+.right-side{
+  padding: 1rem 1.5rem;
+  width: 45%;
+  height: 86.5%;
+}
+
+.green-text-margin{
+  margin-top: 2rem;
+}
+
+.input{
+  width: 100%;
+  padding: 0.37rem 0.5rem;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+}
+
+
+.input-field{
+  border: 0;
+  background-color: hsl(189, 41%, 97%);
+  height: 100%;
+  text-align: right;
+  font-size: 20px;
+  width: 90%;
+  font-family: 'Space Mono', monospace;
+  color: hsl(183, 100%, 15%);
+}
+
+.input-field::placeholder{
+  color: hsl(186, 14%, 43%);
+}
+
+.input-field:focus{
+  outline:none
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.badge-collection{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: auto auto;
+  grid-gap: 15px;
+  padding: 0.3rem 1rem;
+}
+
+.tip-percentage{
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border: none;
+  padding: 0.5rem 2.2rem;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.tip-percentage:hover{
+  background-color: hsl(172, 90%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.tip-percentage:active{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%)
+}
+
+.badge4{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.badge5{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.badge6{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  width: 100%;
+  font-weight: 700;
+}
+
+.badge6::placeholder{
+  text-align: center;
+  font-weight: 700;
+
+}
+
+
+
+
+/***************************************************************/
+/***************************************************************/
+
+/* LEFT SIDE DESIGN  */
+
+/***************************************************************/
+/***************************************************************/
+
+
+.left-side{
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  width: 46.5%;
+  height: 86.5%;
+}
+
+.green-div-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.7rem 1.9rem 0;
+}
+
+.bigtext{
+  font-size: 45px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+  margin-left: 4rem;
+}
+
+.reset{
+  text-align: center;
+  margin: 6rem 1.9rem;
+  padding: 0.8rem 8.5rem;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+}
+
+.reset:disabled{
+  background-color: hsl(183, 98%, 20%);
+  color: hsl(183, 100%, 15%);
+}
+
+.reset:hover{
+  background-color: hsl(172, 90%, 84%);
+}
+
+@media (max-width: 400px) {
+  .container{
+    padding: 0;
+    padding-top: 3rem;
+    height: 90vh;
+  }
+  .mainbody{
+    flex-direction: column;
+    width: 100%;
+    height: 44rem;
+  }
+  .reset{
+    margin: 1rem 0 1.5rem 2rem;
+    padding: 0.6rem 6rem ;
+  }
+  .right-side{
+    width: 100%;
+  }
+  .left-side{
+    width: 90%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .bigtext{
+    font-size: 2rem;
+  }
+  .badge-collection{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto) ;
+  }
+  .badge3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .badge4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .badge5{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .badge6{
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}

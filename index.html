@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/495eef53e0.js" crossorigin="anonymous"></script>
+
+  <!-- CSS stylesheet  -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <title>Tip Calculator</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Title Text  -->
+    <div class="title">
+      <img src="images/logo.svg" class="logo" alt="logo image">
+    </div>
+
+    <!-- Main Body Container -->
+    <div class="mainbody">
+
+      <!-- Right Side Container  -->
+      <div class="right-side">
+
+        <!-- Bill Input  -->
+        <p class="green-text">Bill</p>
+        <div class="input">
+          <img src="images/icon-dollar.svg" alt="" class="icon">
+          <input data-bill-amount class="bill input-field" type="number" placeholder="0">
+        </div>
+
+        <!-- Tip Selection Section  -->
+        <p class="green-text green-text-margin">Select Tip %</p>
+        <div class="badge-collection">
+          <button type= "button" onclick="getTipPercentage(this)" data-tip value="0.05" class="tip-percentage badge1">5%</button>
+          <button type= "button" onclick="getTipPercentage(this)" data-tip value="0.1" class="tip-percentage badge2">10%</button>
+          <button type= "button" onclick="getTipPercentage(this)" data-tip value="0.15" class="tip-percentage badge3">15%</button><br>
+          <button type= "button" onclick="getTipPercentage(this)" data-tip value="0.25" class="tip-percentage badge4">25%</button>
+          <button type= "button" onclick="getTipPercentage(this)" data-tip value="0.5" class="tip-percentage badge5">50%</button>
+          <input data-custom class="input input-field badge-input badge6 custom-percentage" type="number" placeholder="Custom">
+        </div>
+
+        <!-- Number of People Input  -->
+        <p class="green-text ">Number of People</p>
+        <div class="input">
+          <img src="images/icon-person.svg" alt="" class="icon">
+          <input data-number-of-people class="input-field people-number" type="number" placeholder="0">
+        </div>
+
+      </div>
+
+      <!-- Left Green Side  -->
+      <div class="left-side">
+        <div class="green-div-text">
+          <p class="white-text">Tip amount<br><span class="sub-text">/ person</span> </p>
+          <p data-tip-per-person class="tip-amount bigtext">$0.00</p>
+        </div>
+
+        <div class="green-div-text">
+          <p class="white-text">Total<br><span class="sub-text">/ person</span> </p>
+          <p data-total-per-person class="total-amount bigtext">$0.00</p>
+        </div>
+
+        <button data-reset onclick="reset()" class="reset">RESET</button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
